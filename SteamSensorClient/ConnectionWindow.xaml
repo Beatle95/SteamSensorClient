@@ -1,0 +1,30 @@
+﻿<Window x:Class="SteamSensorClient.ConnectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SteamSensorClient"
+        mc:Ignorable="d"
+        Title="Соединение" Height="250" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <RadioButton x:Name="rbConnection" HorizontalAlignment="Center">Соединение</RadioButton>
+            <Label HorizontalAlignment="Center">COM-порт:</Label>
+            <ComboBox x:Name="cbCom"></ComboBox>
+            <Button x:Name="bChoose" Margin="0 10 0 0" IsDefault="True" FontWeight="Bold" Click="Button_Click_2">Выбрать</Button>
+            <Button Margin="0 10 0 0" Click="Button_Click_1">Отмена</Button>
+            <Button Margin="0 10 0 0" Click="Button_Click">Обновить</Button>
+        </StackPanel>
+    </Grid>
+</Window>
